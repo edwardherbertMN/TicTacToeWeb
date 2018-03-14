@@ -1,0 +1,49 @@
+﻿@section scripts {
+    <script src="js/signalr-client.js"></script>
+    <script src="/js/site.js" asp-append-version="true"></script>
+}
+
+@{
+    ViewData["Title"] = "Tic Tac Toe";
+}
+
+<h2>Tic Tac Toe</h2>
+
+<div id="game">
+    <input class="btnBoard btn btn-primary" type="button">
+    <input class="btnBoard btn btn-primary" type="button">
+    <input class="btnBoard btn btn-primary" type="button">
+    <br />
+    <input class="btnBoard btn btn-primary" type="button">
+    <input class="btnBoard btn btn-primary" type="button">
+    <input class="btnBoard btn btn-primary" type="button">
+    <br />
+    <input class="btnBoard btn btn-primary" type="button">
+    <input class="btnBoard btn btn-primary" type="button">
+    <input class="btnBoard btn btn-primary" type="button">
+</div>
+
+<div id="controls">
+    <div id="inLobby" style="display:block">
+        <form id="joinRoom" action="#">
+            <label for="message">Join Room:</label>
+            <input type="text" id="roomID" />
+            <input type="submit" id="join" value="Join" />
+        </form>
+        <form id="playComputer" action="#">
+            <input type="submit" id="join" value="Play Computer" />
+        </form>
+    </div>
+    <div id="inGame" style="display:none">
+        <label id="playerDetails"></label>
+        <form id="leaveRoom" action="#">
+            <input type="submit" id="leave" value="Leave" />
+        </form>
+        <form id="sendMessage" action="#">
+            <label for="message">Message:</label>
+            <input type="text" id="message" />
+            <input type="submit" id="send" value="Send" />
+        </form>
+        <ul id="messages"></ul>
+    </div>
+</div>
